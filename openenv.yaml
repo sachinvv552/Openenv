@@ -1,0 +1,23 @@
+name: supportbench
+version: 0.1.0
+description: OpenEnv-style customer support triage benchmark with deterministic graders.
+entrypoint: supportbench.env:SupportBenchEnv
+benchmark: supportbench
+tasks:
+  - easy_duplicate_charge
+  - medium_shipping_delay
+  - hard_account_takeover
+models:
+  observation: supportbench.env:SupportBenchObservation
+  action: supportbench.env:SupportBenchAction
+  reward: supportbench.env:SupportBenchReward
+metadata:
+  domain: customer_support
+  difficulty_range:
+    - easy
+    - medium
+    - hard
+  tags:
+    - openenv
+    - customer-support
+    - triage
