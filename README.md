@@ -1,10 +1,11 @@
 ---
-title: SupportBench
-emoji: "📨"
+title: SupportBench OpenEnv
+emoji: "robot"
 colorFrom: blue
 colorTo: green
 sdk: docker
 app_port: 7860
+pinned: false
 tags:
   - openenv
   - customer-support
@@ -25,7 +26,7 @@ Customer support triage is a real operational workflow used by SaaS teams every 
 - `step(action: SupportBenchAction) -> SupportBenchStepResult`
 - `state() -> SupportBenchState`
 
-Core implementation: [supportbench/env.py](C:\Users\ASUS\OneDrive\Documents\New project\supportbench\env.py)
+Core implementation: `supportbench/env.py`
 
 ## Observation space
 
@@ -74,7 +75,7 @@ All graders return a deterministic score in `[0.0, 1.0]`.
 
 ## Baseline inference
 
-The root-level [inference.py](C:\Users\ASUS\OneDrive\Documents\New project\inference.py) uses the OpenAI client with:
+The root-level `inference.py` uses the OpenAI client with:
 
 - `HF_TOKEN` or `OPENAI_API_KEY`
 - `API_BASE_URL`
