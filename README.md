@@ -1,6 +1,6 @@
 ---
 title: SupportBench OpenEnv
-emoji: "robot"
+emoji: "📨"
 colorFrom: blue
 colorTo: green
 sdk: docker
