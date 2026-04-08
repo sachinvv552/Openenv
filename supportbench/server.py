@@ -46,8 +46,9 @@ def tasks():
 
 
 @app.post("/reset")
-def reset(request: ResetRequest):
-    observation = ENV.reset(task_id=request.task_id)
+def reset(request: Optional[ResetRequest] = None):
+    task_id = request.task_id if request else None
+    observation = ENV.reset(task_id=task_id)
     return observation.model_dump()
 
 
